@@ -27,6 +27,7 @@
   --normalFontSize: .938rem;
   --smallFontSize: .813rem;
   --smallestFontSize: .75rem;
+  --buttonBackground: rgba(19, 134, 133, 1);
 }
 
 .flex{
@@ -53,7 +54,7 @@ font-size: var(--h2FontSize);
 cursor: pointer;
 }
 
-img, video{
+img{
   height: auto;
   width: 100%;
 }
@@ -81,6 +82,6 @@ img, video{
   margin-left: .5rem;
 }
 .btn:hover{
-  color: var(--primaryColor) ;
+  color: var(--buttonBackground) ;
   background: var(--paleGreen);
 }
