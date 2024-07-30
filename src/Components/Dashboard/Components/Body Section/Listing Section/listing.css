@@ -1,0 +1,32 @@
+.listingSection {
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.listingSection h1 {
+  margin-bottom: 20px;
+}
+
+.listingSection .items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.listingSection .item {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listingSection .item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}

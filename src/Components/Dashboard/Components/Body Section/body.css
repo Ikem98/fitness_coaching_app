@@ -1,0 +1,9 @@
+.body {
+  margin-left: 250px; /* Push the body content to the right */
+  padding: 20px;
+  width: calc(100% - 250px); /* Adjust width to take up remaining space */
+  min-height: 100vh;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}

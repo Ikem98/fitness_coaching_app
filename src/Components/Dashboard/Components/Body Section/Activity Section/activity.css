@@ -1,0 +1,28 @@
+.activitySection {
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.activitySection h1 {
+  margin-bottom: 20px;
+}
+
+.activitySection .activities {
+  display: flex;
+  flex-direction: column;
+}
+
+.activitySection .activity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.activitySection .activity img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

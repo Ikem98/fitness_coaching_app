@@ -1,87 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family:"Roboto", sans-serif;
-  
-
-}
-
-:root {
-  --primaryColor: hsl(94, 55%, 56%);
-  --paleGreen: hsl(96, 75%, 89%);
-  --hoverColor: hsl(93, 75%, 76%);
-  --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(0, 0%, 18%);
-  --greyText: hsl(0, 0%, 75%);
-  --bgColor: hsl(113, 11%, 85%);
-  --inputColor: hsl(330, 12%, 97%);
-  --inputColor: hsl(154, 14%, 90%);
-
-  --biggestFontSize: 2.5rem;
-  --h1FontSize: 1.5rem;
-  --h2FontSize: 1.25rem;
-  --h3FontSize: 1rem;
-  --normalFontSize: .938rem;
-  --smallFontSize: .813rem;
-  --smallestFontSize: .75rem;
-  --buttonBackground: rgba(19, 134, 133, 1);
-}
-
-.flex{
+.loginPage, .signupPage {
   display: flex;
+  justify-content: center;
   align-items: center;
-}
-.grid{
-  display: grid;
-  align-items: center;
-  gap: 1.5rem;
-}
-html{
-  font-size: 90%;
-}
-a{
-  text-decoration: none;
-}
-li{
-  list-style: none;
+  height: 100vh; 
+  width: 100%; 
+  background-color: #f4f4f4; 
 }
 
-.icon{
-font-size: var(--h2FontSize);
-cursor: pointer;
+.container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px; 
 }
 
-img{
-  height: auto;
+.headerDiv {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+.inputDiv {
+  margin-bottom: 15px; 
+}
+
+.inputDiv input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  width: 100%; 
+  padding: 10px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #8f9690;
+  color: hsl(94, 55%, 56%);
+}
+
+.forgotPassword, .footerDiv {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.footerDiv {
+  margin-top: 30px; 
+}
+.footer-links {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Center-aligns the items horizontally */
+  gap: 15px; /* Adds space between the links */
+}
+.footer {
+  text-align: center;
+  margin-top: 100px; /* Pushes the footer further down */
   width: 100%;
 }
-.message{
+.message {
   display: none;
 }
-.showMessage{
+
+.showMessage {
   display: block;
   color: var(--whiteColor);
-  background: rgb(255,0,0);
+  padding: 10px;
+  background: rgb(255, 0, 0);
   border-radius: 3px;
   text-align: center;
 }
-.btn{
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 8px;
-  padding: .8rem 1rem;
-  color: var(--greyText);
-
+@media screen and (max-width: 602px) {
+  .loginPage .container, .registerPage .container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .loginPage .container .videoDiv, .registerPage .container .videoDiv {
+    width: 100%;
+  }
+  .loginPage .container .videoDiv .textDiv .title, .registerPage .container .videoDiv .textDiv .title {
+    font-size: 20px;
+  }
+  .loginPage .container .videoDiv .textDiv p, .registerPage .container .videoDiv .textDiv p {
+    padding: 1rem;
+  }
+  .loginPage .container .videoDiv .footerDiv .text, .registerPage .container .videoDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .loginPage .container .videoDiv .footerDiv .btn, .registerPage .container .videoDiv .footerDiv .btn {
+    padding: 0.4rem 1.5rem;
+  }
+  .loginPage .container .formDiv, .registerPage .container .formDiv {
+    gap: 1rem;
+    transform: translateY(-0.5rem);
+  }
+  .loginPage .container .formDiv .headerDiv, .registerPage .container .formDiv .headerDiv {
+    padding: 1rem 0;
+  }
+  .loginPage .container .formDiv .headerDiv img, .registerPage .container .formDiv .headerDiv img {
+    width: 40px;
+  }
+  .loginPage .container .formDiv .headerDiv h3, .registerPage .container .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .loginPage .container .formDiv .form, .registerPage .container .formDiv .form {
+    gap: 0.5rem;
+  }
+  .loginPage .container .formDiv .form .inputDiv input, .registerPage .container .formDiv .form .inputDiv input {
+    width: 100%;
+  }
 }
 
-.btn .icon{
-  margin-left: .5rem;
-}
-.btn:hover{
-  color: var(--buttonBackground) ;
-  background: var(--paleGreen);
-}
