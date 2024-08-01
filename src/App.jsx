@@ -10,35 +10,39 @@ import {
   RouterProvider
 } from 'react-router-dom';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Login />,
-    errorElement: <ErrorBoundary />
-  },
-  {
-    path: '/Login',
-    element: <Login />,
-    errorElement: <ErrorBoundary />
-  },
-  {
-    path: '/Dashboard',
-    element: <Dashboard />,
-    errorElement: <ErrorBoundary />
-  },
-  {
-    path: '/Signup',
-    element: <Signup />,
-    errorElement: <ErrorBoundary />
-  },
-  {
-    path: '*',
-    element: <div>404 Not Found</div>,
-    errorElement: <ErrorBoundary />
-  }
-]);
-
 function App() {
+  const handleLogin = (user) => {
+    console.log('User logged in:', user);
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Login onLogin={handleLogin} />,
+      errorElement: <ErrorBoundary />
+    },
+    {
+      path: '/Login',
+      element: <Login onLogin={handleLogin}/>,
+      errorElement: <ErrorBoundary />
+    },
+    {
+      path: '/coach/Dashboard',
+      element: <Dashboard />,
+      errorElement: <ErrorBoundary />
+    },
+    {
+      path: '/Signup',
+      element: <Signup />,
+      errorElement: <ErrorBoundary />
+    },
+    {
+      path: '*',
+      element: <div>404 Not Found</div>,
+      errorElement: <ErrorBoundary />
+    }
+  ]);
+
   return (
     <div>
       <RouterProvider router={router} />

@@ -1,0 +1,3 @@
+email,password,role
+client@example.com,clientpassword,client
+coach@example.com,coachpassword,coach
