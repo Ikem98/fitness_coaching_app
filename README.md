@@ -40,6 +40,7 @@ Setup:
 
 cd server
 npm install
+npm init
 
 # the client directory
 
