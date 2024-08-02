@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+Fitness Coaching App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Hello Instructor,
 
-In the project directory, you can run:
+Welcome to our Fitness Coaching App! 
 
-### `npm start`
+Features:
+User registration and login
+Workout program creation
+Preview of some created workout programs
+Dynamic and responsive UI
+Technologies We Used Include:
+Frontend: React, Axios
+Backend: Node.js, Express
+Database: MySQL
+Styling: CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Prerequisites: Very Important
 
-### `npm test`
+Before running this project, Install the following:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Node.js (npm init)
+## https://www.youtube.com/watch?v=3F5IaPqj7ds&ab_channel=DarrenDoesEverything
+MySQL
+npm 
+XAMPP 
+## (https://www.youtube.com/watch?v=VCHXCusltqI&list=LL&index=1&ab_channel=GeekyScript)
+Setup:
+1. Clone the Repository
 
-### `npm run build`
+2. Install all Dependencies
+Insure you are i nthe right project directory and install both the front end and back end dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#  the server directory 
+cd server
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#  the client directory 
+npm install
+3. Setup MySQL Database  
+## (https://www.youtube.com/watch?v=co-xyHRdHRg&ab_channel=AmitThinks)
+Using XAMPP, Open MySQL. You will need two databases:
+ userdata and workouts.
+ 
+ See the codebelow for the Database Schema
+userdata Database Schema
+sql
 
-### `npm run eject`
+CREATE DATABASE userdata;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Now for the 
 
-## Learn More
+\workouts Database Schema
+sql
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CREATE DATABASE workouts;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+CREATE TABLE workouts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description TEXT NOT NULL,
+  duration INT NOT NULL,
+  difficulty VARCHAR(50) NOT NULL
+);
 
-### Analyzing the Bundle Size
+## The actual input will look diffeent depending on the db you are using.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Run the Server
+cd server
+node index.js
+5. Run the Frontend
+In a new Terminal:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+cd client
+npm start
