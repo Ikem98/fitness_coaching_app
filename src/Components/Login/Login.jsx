@@ -1,37 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../App.css';
 import { BsFillShieldLockFill } from 'react-icons/bs';
 import { MdMarkEmailRead } from 'react-icons/md';
-import userData from '../../csv/userData.csv';
-import parseCSV from '../../utils/dataParser';
+import axios from 'axios';
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    parseCSV(userData, (data) => {
-      setUsers(data);
+  
+  const loginUser = () => {
+    axios.post('http://localhost:3002/login', {
+      Email: email,
+      Password: password,
+    }).then((response) => {
+      if (response.data.length > 0) {
+        if (typeof onLogin === 'function') {
+          onLogin(response.data[0]);
+          navigate('/dashboard');  // Redirects to the dashboard
+        } else {
+          console.error('onLogin is not a function:', onLogin);
+        }
+      } else {
+        setError('Invalid email or password');
+      }
+    }).catch((error) => {
+      console.error(error);
+      setError('An error occurred while logging in.');
     });
-  }, []);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const user = users.find(u => u.email === email && u.password === password);
-    if (user) {
-      if (typeof onLogin === 'function') {
-        onLogin(user);
-        navigate(`/${user.role}/dashboard`);
-      } else {
-        console.error('onLogin is not a function:', onLogin);
-      }
-    } else {
-      setError('Invalid email or password');
-    }
+    loginUser();
   };
 
   return (

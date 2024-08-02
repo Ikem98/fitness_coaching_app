@@ -1,6 +1,6 @@
 import React from 'react';
 import './activity.css';
-// import user1 from '../../../Assets/client1.png'; // Adjust the path as needed
+// import user1 from '../../../Assets/client1.png'; 
 
 const Activity = () => {
   return (

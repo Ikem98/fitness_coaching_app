@@ -1,0 +1,106 @@
+.workoutContainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.workoutContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.workoutForm .formGroup {
+  margin-bottom: 20px;
+}
+
+.workoutForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.workoutForm input,
+.workoutForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.workoutForm textarea {
+  height: 100px;
+}
+
+.difficultyButtons button {
+  background: #ecf0f1;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.difficultyButtons button.selected {
+  background: #138685;
+  color: white;
+}
+
+.difficultyButtons button:hover {
+  background: #bdc3c7;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancelButton,
+.clearButton,
+.createButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer
+}
+
+.cancelButton {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background: #cf3506;
+  color: #ffffff;
+  transition: background 0.3s;
+}
+
+.clearButton {
+  background: #f39c12;
+  color: white;
+  transition: background 0.3s;
+}
+
+.clearButton:hover {
+  background: #e67e22;
+}
+
+.createButton {
+  background: #495a74;
+  color: #ffffff;
+  transition: background 0.3s;
+}
+
+.createButton:hover {
+  background: #0f6f6d;
+}
+
+p {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}

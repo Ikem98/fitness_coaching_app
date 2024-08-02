@@ -1,13 +1,29 @@
 .sideBar {
-  background: #ffffff;
-  width: 250px; /* Width of the sidebar */
-  height: 100vh; /* Full height */
+  background: #2c3e50; 
+  color: #ecf0f1; 
+  width: 250px; 
+  height: 100vh; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: fixed; /* Makes sidebar fixed */
+  position: fixed; 
   left: 0;
   top: 0;
   overflow: auto; /* For scrolling */
   padding: 20px;
+  transition: width 0.3s; 
+}
+
+.sideBar.minimized {
+  width: 80px; /* should work now */
+}
+
+.toggleButton {
+  cursor: pointer;
+  padding: 10px;
+  color: #ecf0f1;
+}
+
+.logoDiv h2 {
+  color: #ecf0f1;
 }
 
 .menuDiv ul {
@@ -22,14 +38,24 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .menuDiv li:hover {
-  background: #f0f0f0;
+  background: rgba(19, 134, 133, 1);
+}
+
+.menuLink {
+  color: #ecf0f1;
+  text-decoration: none;
 }
 
 .menuDiv .icon {
   margin-right: 10px;
   font-size: 20px;
-  color: #333;
+  color: #ecf0f1;
+}
+
+.minimized .smallText {
+  display: none; 
 }

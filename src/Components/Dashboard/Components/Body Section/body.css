@@ -1,9 +1,15 @@
 .body {
-  margin-left: 250px; /* Push the body content to the right */
+  margin-left: 250px; 
   padding: 20px;
-  width: calc(100% - 250px); /* Adjust width to take up remaining space */
+  width: calc(100% - 250px); 
   min-height: 100vh;
   background: #f4f4f4;
   display: flex;
   flex-direction: column;
+  transition: margin-left 0.3s, width 0.3s;
+}
+
+.minimized ~ .body {
+  margin-left: 80px; 
+  width: calc(100% - 80px); 
 }

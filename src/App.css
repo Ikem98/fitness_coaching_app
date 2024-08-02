@@ -54,28 +54,17 @@
   margin-top: 30px; 
 }
 .footer-links {
-  list-style: none; /* Removes bullet points */
-  display: flex; /* Uses flexbox for layout */
-  justify-content: center; /* Center-aligns the items horizontally */
-  gap: 15px; /* Adds space between the links */
+  list-style: none; 
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
 }
 .footer {
   text-align: center;
-  margin-top: 100px; /* Pushes the footer further down */
+  margin-top: 100px; 
   width: 100%;
 }
-.message {
-  display: none;
-}
 
-.showMessage {
-  display: block;
-  color: var(--whiteColor);
-  padding: 10px;
-  background: rgb(255, 0, 0);
-  border-radius: 3px;
-  text-align: center;
-}
 @media screen and (max-width: 602px) {
   .loginPage .container, .registerPage .container {
     height: 100%;
@@ -83,19 +72,19 @@
     flex-direction: column;
     padding: 1.5rem;
   }
-  .loginPage .container .videoDiv, .registerPage .container .videoDiv {
+  .loginPage .container  .registerPage .container  {
     width: 100%;
   }
-  .loginPage .container .videoDiv .textDiv .title, .registerPage .container .videoDiv .textDiv .title {
+  .loginPage .container  .textDiv .title, .registerPage .container  .textDiv .title {
     font-size: 20px;
   }
-  .loginPage .container .videoDiv .textDiv p, .registerPage .container .videoDiv .textDiv p {
+  .loginPage .container  .textDiv p, .registerPage .container  .textDiv p {
     padding: 1rem;
   }
-  .loginPage .container .videoDiv .footerDiv .text, .registerPage .container .videoDiv .footerDiv .text {
+  .loginPage .container  .footerDiv .text, .registerPage .container  .footerDiv .text {
     font-size: 12px;
   }
-  .loginPage .container .videoDiv .footerDiv .btn, .registerPage .container .videoDiv .footerDiv .btn {
+  .loginPage .container  .footerDiv .btn, .registerPage .container  .footerDiv .btn {
     padding: 0.4rem 1.5rem;
   }
   .loginPage .container .formDiv, .registerPage .container .formDiv {
@@ -118,4 +107,33 @@
     width: 100%;
   }
 }
+.message {
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+  display: none; 
+}
+
+.errorMessage {
+  background: rgb(255, 0, 0); /* Red for errors */
+}
+
+.successMessage {
+  background: rgb(34, 139, 34); /* Green for success */
+}
+
+.showMessage {
+  display: block; 
+}
+
+.App {
+  display: flex;
+}
+
+.App.minimized .body {
+  margin-left: 80px; 
+  width: calc(100% - 80px);
+}
+
 

@@ -1,14 +1,10 @@
-// src/App.jsx
 import React from 'react';
 import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Login from './Components/Login/Login.jsx';
 import Signup from './Components/Signup/Signup.jsx';
 import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary.jsx';
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
   const handleLogin = (user) => {
@@ -22,17 +18,17 @@ function App() {
       errorElement: <ErrorBoundary />
     },
     {
-      path: '/Login',
+      path: '/login',
       element: <Login onLogin={handleLogin}/>,
       errorElement: <ErrorBoundary />
     },
     {
-      path: '/coach/Dashboard',
+      path: '/dashboard/*', 
       element: <Dashboard />,
       errorElement: <ErrorBoundary />
     },
     {
-      path: '/Signup',
+      path: '/signup',
       element: <Signup />,
       errorElement: <ErrorBoundary />
     },

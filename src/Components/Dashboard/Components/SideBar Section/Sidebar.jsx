@@ -3,6 +3,7 @@ import './sidebar.css';
 import { BiRun, BiMessageSquareDetail, BiCalendarEvent, BiLineChart, BiCog, BiDollarCircle, BiHelpCircle, BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { LuLogOut } from 'react-icons/lu';
+
 const Sidebar = () => {
   const [isMinimized, setIsMinimized] = useState(false);
 

@@ -1,32 +1,35 @@
 .listingSection {
-  background: #ffffff;
   padding: 20px;
+  background: #ffffff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .listingSection h1 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.listingSection .items {
+.items {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
-.listingSection .item {
-  background: #f4f4f4;
+.item {
+  background: #ecf0f1;
+  border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  max-width: 300px;
 }
 
-.listingSection .item img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+.item h2 {
+  margin: 0 0 10px;
+}
+
+.item p {
+  margin: 5px 0;
 }
