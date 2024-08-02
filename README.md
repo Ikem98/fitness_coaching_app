@@ -37,6 +37,7 @@ Insure you are i nthe right project directory and install both the front end and
 #  the server directory 
 cd server
 npm install
+npm init
 
 #  the client directory 
 npm install
